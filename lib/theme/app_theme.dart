@@ -11,7 +11,6 @@ class AppTheme {
   static const Color onSurface = Color(0xFF2C2C2C);
   static const Color error = Color(0xFFE5484D);
 
-
 // Typescale TextTheme
   static const ColorScheme colorScheme = ColorScheme(
     brightness: Brightness.light,
