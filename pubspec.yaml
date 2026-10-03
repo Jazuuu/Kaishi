@@ -29,5 +29,5 @@ flutter:
   uses-material-design: true
   assets:
     - assets/data/lessons.json
-    - assets/word_of_the_day.json
+    - assets/data/word_of_the_day.json
     - .env
