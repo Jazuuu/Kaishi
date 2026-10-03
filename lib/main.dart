@@ -17,7 +17,7 @@ Future<void> main() async {
   // handled gracefully so the app still runs — Sensei just won't
   // be able to answer until a key is added.
   try {
-    await dotenv.load(fileName: '.env');
+    await dotenv.load(fileName: "assets/.env");
   } catch (_) {
     dotenv.testLoad(mergeWith: {'GEMINI_API_KEY': ''});
   }
