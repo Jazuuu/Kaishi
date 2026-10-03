@@ -90,8 +90,9 @@ class _AIAssistantScreenState extends State<AIAssistantScreen> {
         _messages.add(
           const ChatMessage(
             text:
-                'Sensei needs a Gemini API key to answer. Add one to the '
-                '.env file (see .env.example), then try again.',
+                'Sensei is only available when the app runs locally with a '
+                'Gemini API key. Add one to assets/.env (see .env.example), '
+                'then try again.',
             sender: 'sensei',
             isError: true,
           ),

@@ -84,10 +84,17 @@ jobs:
         run: flutter test
         continue-on-error: true
 
-      - name: Create .env
+      # pubspec.yaml lists assets/.env as an asset, so the file has to exist for
+      # the build to succeed. It is deliberately written WITHOUT the Gemini key:
+      # everything under assets/ is copied into build/web and served publicly,
+      # so a key placed here can be downloaded by anyone from the live site.
+      # The key stays in your local assets/.env (git-ignored) only. On the
+      # deployed demo, Sensei shows its "no key" message and Word of the Day
+      # falls back to the bundled word list.
+      - name: Create empty .env (no secrets)
         if: steps.check.outputs.ready == 'true'
         run: |
-          echo "GEMINI_API_KEY=${{ secrets.GEMINI_API_KEY }}" > assets/.env
+          echo "GEMINI_API_KEY=" > assets/.env
 
       - name: Build web
         if: steps.check.outputs.ready == 'true'
