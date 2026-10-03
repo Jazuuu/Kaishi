@@ -99,7 +99,7 @@ jobs:
       - name: Build web
         if: steps.check.outputs.ready == 'true'
         run: |
-          flutter build web --release \
+          flutter build web --profile \
             --base-href "/${{ github.event.repository.name }}/"
           # add one --dart-define=NAME=$NAME line per secret you uncommented above
 
