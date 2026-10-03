@@ -89,4 +89,3 @@ class WordOfTheDayCard extends StatelessWidget {
     );
   }
 }
-}
