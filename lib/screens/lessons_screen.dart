@@ -5,6 +5,7 @@ import '../services/lesson_service.dart';
 import '../services/progress_service.dart';
 import '../theme/app_theme.dart';
 import '../theme/app_spacing.dart';
+import '../widgets/app_header.dart';
 import '../widgets/lesson_card.dart';
 import '../widgets/lesson_tab.dart';
 import '../widgets/primary_button.dart';
@@ -85,6 +86,15 @@ class _LessonsScreenState extends State<LessonsScreen> {
     if (lesson != null) widget.onActiveLessonChanged?.call(lesson);
   }
 
+  // Moves to the previous lesson in the active category. Pure
+  // navigation — never touches _progress, so completed lessons
+  // (including the one being left) stay completed.
+  void _goToPreviousLesson() {
+    if (_activeLessonIndex == 0) return;
+    setState(() => _activeLessonIndex -= 1);
+    _notifyActiveLesson();
+  }
+
   List<Lesson> get _activeLessons => _lessons[_activeCategory] ?? [];
 
   Lesson? get _activeLesson {
@@ -132,79 +142,113 @@ class _LessonsScreenState extends State<LessonsScreen> {
     }
 
     final lesson = _activeLesson;
+    final canGoBack = _activeLessonIndex > 0;
+    final lessonPosition = _activeLessons.isEmpty
+        ? ''
+        : 'Lesson ${_activeLessonIndex + 1} of ${_activeLessons.length}';
 
-    return SafeArea(
-      bottom: false,
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(
-          Appspacing.lg,
-          Appspacing.lg,
-          Appspacing.lg,
-          0,
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    return Column(
+      children: [
+        const AppHeader(title: '開始 Kaishi', icon: Icons.menu_book_rounded),
+        Expanded(
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(
+              Appspacing.lg,
+              Appspacing.md,
+              Appspacing.lg,
+              0,
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('開始 Kaishi', style: textTheme.headlineSmall),
-                const Icon(
-                  Icons.menu_book_rounded,
-                  color: AppTheme.onSurface,
+                Text('Daily Lessons', style: textTheme.titleMedium),
+                const SizedBox(height: Appspacing.md),
+                Container(
+                  padding: const EdgeInsets.all(Appspacing.xs / 2),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFF3F3F3),
+                    borderRadius: BorderRadius.circular(999),
+                  ),
+                  child: Row(
+                    children: LessonCategory.values.map((category) {
+                      return LessonTab(
+                        label: category.label,
+                        selected: category == _activeCategory,
+                        onTap: () {
+                          setState(() {
+                            _activeCategory = category;
+                            _activeLessonIndex = 0;
+                          });
+                          _notifyActiveLesson();
+                        },
+                      );
+                    }).toList(),
+                  ),
+                ),
+                const SizedBox(height: Appspacing.md),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    GestureDetector(
+                      onTap: canGoBack ? _goToPreviousLesson : null,
+                      behavior: HitTestBehavior.opaque,
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Icon(
+                            Icons.arrow_back_ios_rounded,
+                            size: 14,
+                            color: canGoBack
+                                ? AppTheme.onSurface
+                                : AppTheme.secondary.withValues(alpha: 0.4),
+                          ),
+                          const SizedBox(width: Appspacing.xs),
+                          Text(
+                            'Back',
+                            style: textTheme.labelMedium?.copyWith(
+                              color: canGoBack
+                                  ? AppTheme.onSurface
+                                  : AppTheme.secondary.withValues(alpha: 0.4),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Text(
+                      lessonPosition,
+                      style: textTheme.labelSmall?.copyWith(
+                        color: AppTheme.secondary,
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: Appspacing.sm),
+                Expanded(
+                  child: ListView(
+                    children: [
+                      if (lesson != null)
+                        LessonCard(
+                          lessonTitle: lesson.title,
+                          description: lesson.description,
+                          characters: lesson.characters,
+                          vocabulary: lesson.vocabulary,
+                        ),
+                      const SizedBox(height: Appspacing.md),
+                      PrimaryButton(
+                        label: 'Continue Learning',
+                        onPressed: lesson == null
+                            ? null
+                            : _handleContinueLearning,
+                      ),
+                      const SizedBox(height: Appspacing.lg),
+                    ],
+                  ),
                 ),
               ],
             ),
-            const SizedBox(height: Appspacing.lg),
-            Text('Daily Lessons', style: textTheme.titleMedium),
-            const SizedBox(height: Appspacing.md),
-            Container(
-              padding: const EdgeInsets.all(Appspacing.xs / 2),
-              decoration: BoxDecoration(
-                color: const Color(0xFFF3F3F3),
-                borderRadius: BorderRadius.circular(999),
-              ),
-              child: Row(
-                children: LessonCategory.values.map((category) {
-                  return LessonTab(
-                    label: category.label,
-                    selected: category == _activeCategory,
-                    onTap: () {
-                      setState(() {
-                        _activeCategory = category;
-                        _activeLessonIndex = 0;
-                      });
-                      _notifyActiveLesson();
-                    },
-                  );
-                }).toList(),
-              ),
-            ),
-            const SizedBox(height: Appspacing.md),
-            Expanded(
-              child: ListView(
-                children: [
-                  if (lesson != null)
-                    LessonCard(
-                      lessonTitle: lesson.title,
-                      description: lesson.description,
-                      characters: lesson.characters,
-                      vocabulary: lesson.vocabulary,
-                    ),
-                  const SizedBox(height: Appspacing.md),
-                  PrimaryButton(
-                    label: 'Continue Learning',
-                    onPressed: lesson == null
-                        ? null
-                        : _handleContinueLearning,
-                  ),
-                  const SizedBox(height: Appspacing.lg),
-                ],
-              ),
-            ),
-          ],
+          ),
         ),
-      ),
+      ],
     );
   }
 }
