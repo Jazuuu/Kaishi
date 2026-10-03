@@ -4,6 +4,7 @@ import '../services/gemini_service.dart';
 import '../theme/app_theme.dart';
 import '../theme/app_spacing.dart';
 import '../widgets/ai_chat_bubble.dart';
+import '../widgets/app_header.dart';
 import '../widgets/chat_input.dart';
 
 ///  AI Chat Screen — ask Sensei questions about the lesson
