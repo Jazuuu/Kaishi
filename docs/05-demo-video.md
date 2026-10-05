@@ -1,6 +1,6 @@
 # Demo video
 
-**File:** `(https://drive.google.com/file/d/1eSTxpVqPYC0wOEl8KUWA08Cd7NiWwrsU/view?usp=sharing)`
+**File:** 
 **Length:** 9 mins
 **Recorded on: PC, Windows 10, Zoom Recording** 
 
