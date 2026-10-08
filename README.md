@@ -33,7 +33,7 @@ this paragraph with them:
 ```markdown
 | Home | Lesson | Ai Chat |
 | --- | --- | --- |
-| ![Home](docs/assets/Home-screen.png) | ![Detail](docs/assets/Lesson-screen.png) | ![Add](docs/assets/Ai-Chat-screen.png) |
+| ![Home](docs/assets/Home-screen.png) | ![Lesson](docs/assets/Lesson-screen.png) | ![Ai Chat](docs/assets/Ai-Chat-screen.png) |
 ```
 
 A repo without screenshots reads as abandoned, whatever the code says.
