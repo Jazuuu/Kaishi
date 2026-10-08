@@ -31,9 +31,9 @@ Put two or three real screenshots at phone size in `docs/assets/`, then replace
 this paragraph with them:
 
 ```markdown
-| Home | Lesson | Ai Chat |
+| Home | Lesson | AI Chat |
 | --- | --- | --- |
-| ![Home](docs/assets/Home-screen.PNG) | ![Lesson](docs/assets/Lesson-screen.PNG) | ![Ai Chat](docs/assets/Ai-Chat-screen.PNG) |
+| ![Home](docs/assets/Home-screen.PNG) | ![Lesson](docs/assets/Lesson-screen.PNG) | ![AI Chat](docs/assets/Ai-Chat-screen.PNG) |
 ```
 
 A repo without screenshots reads as abandoned, whatever the code says.
