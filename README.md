@@ -6,14 +6,13 @@
   New here? Read START-HERE.md first. Delete this comment when you are done.
 -->
 
-# App Name
+# Kaishi
 
-> One sentence: what this app does, and who it is for.
+> Kaishi is a beginner-friendly Japanese learning app for anyone interested in learning the basics of Japanese.
 
 **Live demo:** https://Jazuuu.github.io/Kaishi/
-<!-- GitHub Pages is set up already; replace if you host elsewhere -->
 
-**Demo video:** `docs/demo.mp4` (link it here once it exists)
+**Demo video:** `docs/demo.mp4`
 
 **Course:** Applications Development and Emerging Technologies (6ADET), Holy Angel University
 
@@ -43,24 +42,24 @@ A repo without screenshots reads as abandoned, whatever the code says.
 
 Three to five bullets. What can a user actually do?
 
-- ...
-- ...
-- ...
+- Learn Japanese basics through Hiragana, Katakana, and Grammar lessons.
+- Ask Sensei, the AI assistant, questions about your lessons.
+- Complete lessons, track your progress, and go back to restudy earlier lessons.
 
 ## Built with
 
 | | |
 | --- | --- |
 | Framework | Flutter (Dart) |
-| State | `setState` / provider / riverpod (say which) |
-| Storage | shared_preferences / Hive / Drift / Firebase / Supabase / other |
-| Other packages | list the ones that matter, with a word on why |
+| State | `setState` |
+| Storage | `shared_preferences` (progress saved on the device) |
+| Other packages | `google_generative_ai` (talks to Gemini) |
 
 ## Running it yourself
 
 ```bash
 flutter pub get
-cp .env.example .env      # only if your app needs keys, see below
+cp assets/.env
 flutter run -d web-server --web-port 8080
 ```
 
@@ -69,24 +68,20 @@ put yours here).
 
 ### Environment variables
 
-This project reads its configuration from a `.env` file that is **not** in the
-repository. Copy `.env.example`, fill in your own values, and never commit the
-result.
+TThis project reads its configuration from `assets/.env`, which is **not** in the
+repository. Copy `.env.example` to `assets/.env`, fill in your own value, and never commit the result.
 
 | Variable | What it is | Where to get one |
 | --- | --- | --- |
-| `EXAMPLE_API_KEY` | ... | ... |
+|  `GEMINI_API_KEY` | lets the app call Gemini for AI Chat | Google AI Studio: https://aistudio.google.com/app/apikey | |
 
 ## Privacy and secrets
 
 Required section. Two or three honest sentences:
 
-- What personal data this app stores, if any, and where it goes.
-- Where the secrets live (`.env` locally, repository secrets in the deploy
-  workflow) and what protects the data on the service side (Firestore rules,
-  Supabase RLS, or "nothing leaves the device").
-- Confirm that all sample data, screenshots and the video contain **no real
-  personal information**.
+- Kaishi does not require an account and does not collect personal data. Your lesson progress is saved only on your device
+- The Gemini API key is stored locally in the .env file and is not committed to the repository or shown publicly.
+- Kaishi does not use a database, and all sample lessons and word lists are made-up learning content.
 
 ## Project documentation
 
