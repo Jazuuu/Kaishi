@@ -3,13 +3,16 @@
 
 ## Mockup 
 ###1. Home Screen
+
 <img src="assets/Home-screen-mockup.PNG" alt="Home" width="390" />
+
 **What the user does here:** Sees a greeting, checks progress on the course they are currently learning, resumes that course, and reads the Word of the Day.
 **Where each tappable thing goes:**
 - **Continue Learning Button:** Opens the Lessons screen at the user's current lesson.
 - **Bottom Navigation Bar (Home | Lessons | Sensei):** Switches between the three main screens. The current screen is highlighted.
 
 ### 2.Lessons Screen
+
 <img src="assets/Lesson-screen-mockup.PNG" alt="Lessons" width="390" />
 
 **What the user does here:**Picks between Hiragana, Katakana and Grammar. reads the current lesson, studies the basic characters and vocabulary examples, and moves on to the next lesson.
@@ -20,6 +23,7 @@
 - **Bottom Navigation Bar (Home | Lessons | Sensei):** Switches between the three main screens. The current screen is highlighted.
 
 ### 3. Sensei (AI Chat) Screen
+
 <img src="assets/Ai-screen-mockup.PNG" alt="Sensei AI Chat" width="390" />
 
 **What the user does here:** Asks the AI tutor questions about the day's lesson and reads its explanations in a chat thread.
@@ -29,7 +33,9 @@
 - **Bottom Navigation Bar (Home | Lessons | Sensei):** Switches between the three main screens. The current screen is highlighted.
 
 ## Wireframes
+
 <img src="assets/Home-screen-wireframe.PNG" alt="Home Wireframe" width="390" />
+
 ###1. Home Screen
 | Screen | Layout Notes | Inputs | Actions → Destination | Data Shown |
 |--------|--------------|--------|-----------------------|------------|
@@ -37,13 +43,17 @@
 Nav Bar → Home, Lessons, or Sensei| Current course progress, Word of the Day|
 
 ###2. Lesson Screen
+
 <img src="assets/Lesson-screen-wireframe.PNG" alt="Lessons Wireframe" width="390" />
+
 | Screen | Layout Notes | Inputs | Actions → Destination | Data Shown |
 |--------|--------------|--------|-----------------------|------------|
 | Lessons |Displays the “Lessons” title, three category tabs, a lesson card with intro text, five character tiles, a Vocabulary Examples box, and a Next Lesson button. | None | Tab → Lesson content for that category, Next Lesson → Next lesson, Nav Bar → Home, Lessons, or Sensei | Lesson for Hiragana, Katakana and Basic Grammar with examples |
 
 ###3.Sensei (AI Chat)
+
 <img src="assets/Ai-screen-wireframe.PNG" alt="Sensei AI Wireframe" width="390" />
+
 | Screen | Layout Notes | Inputs | Actions → Destination | Data Shown |
 |--------|--------------|--------|-----------------------|------------|
 | AI Chat |Displays a chat thread with Sensei and user messages, plus a text input with a send button above the bottom navigation bar. | Chat message text | Send → Adds message to thread and shows Sensei's reply
