@@ -19,7 +19,7 @@
 
 **Where each tappable thing goes:**
 - **Category Tabs (Hiragana | Katakana | Grammar):** Switches the lesson content to the selected category.
-- **Next Lesson → Button:**Loads the next lesson in the same category.
+- **Next Lesson → Button:** Loads the next lesson in the same category.
 - **Bottom Navigation Bar (Home | Lessons | Sensei):** Switches between the three main screens. The current screen is highlighted.
 
 ### 3. Sensei (AI Chat) Screen
