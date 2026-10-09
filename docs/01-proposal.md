@@ -4,7 +4,7 @@
 Beginners learning Japanese have to jump between websites, videos, translators and AI chatbots, so Kaishi puts organized lessons and an AI helper in one app.
 
 ## Who it is for
-Beginners with little or no Japanese, mostly students and anime or manga fans. They want one place to study instead of many tabs.
+For people who want to study beginner Japanese in a simple and easy-to-understand 
 
 ## Core features
 | # | Feature | What happens |
