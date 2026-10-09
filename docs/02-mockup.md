@@ -2,7 +2,7 @@
 
 
 ## Mockup 
-###1. Home Screen
+### 1. Home Screen
 
 <img src="assets/Home-screen-mockup.PNG" alt="Home" width="390" />
 
@@ -15,7 +15,7 @@
 
 <img src="assets/Lesson-screen-mockup.PNG" alt="Lessons" width="390" />
 
-**What the user does here:**Picks between Hiragana, Katakana and Grammar. reads the current lesson, studies the basic characters and vocabulary examples, and moves on to the next lesson.
+**What the user does here:** Picks between Hiragana, Katakana and Grammar. reads the current lesson, studies the basic characters and vocabulary examples, and moves on to the next lesson.
 
 **Where each tappable thing goes:**
 - **Category Tabs (Hiragana | Katakana | Grammar):** Switches the lesson content to the selected category.
@@ -36,13 +36,13 @@
 
 <img src="assets/Home-screen-wireframe.PNG" alt="Home Wireframe" width="390" />
 
-###1. Home Screen
+### 1. Home Screen
 | Screen | Layout Notes | Inputs | Actions → Destination | Data Shown |
 |--------|--------------|--------|-----------------------|------------|
 | Home |Displays the app logo and name, a Japanese greeting, a progress card with a progress bar and arrow button, a Word of the Day card, two placeholders, and a bottom navigation bar. | None | Arrow Button → Lessons
 Nav Bar → Home, Lessons, or Sensei| Current course progress, Word of the Day|
 
-###2. Lesson Screen
+### 2. Lesson Screen
 
 <img src="assets/Lesson-screen-wireframe.PNG" alt="Lessons Wireframe" width="390" />
 
@@ -50,7 +50,7 @@ Nav Bar → Home, Lessons, or Sensei| Current course progress, Word of the Day|
 |--------|--------------|--------|-----------------------|------------|
 | Lessons |Displays the “Lessons” title, three category tabs, a lesson card with intro text, five character tiles, a Vocabulary Examples box, and a Next Lesson button. | None | Tab → Lesson content for that category, Next Lesson → Next lesson, Nav Bar → Home, Lessons, or Sensei | Lesson for Hiragana, Katakana and Basic Grammar with examples |
 
-###3.Sensei (AI Chat)
+### 3.Sensei (AI Chat)
 
 <img src="assets/Ai-screen-wireframe.PNG" alt="Sensei AI Wireframe" width="390" />
 
@@ -103,7 +103,7 @@ The user chooses a lessons between Hiragana, Katakana and Grammar. reads the les
 | Nav bar: Home | Home screen |
 | Nav bar: Sensei | Sensei screen |
 
-### 3.
+### 3. Sensei (AI Chat)
 
 **What is on it:**
 - Kaishi logo and app name in the header
