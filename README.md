@@ -12,7 +12,7 @@
 
 **Live demo:** https://Jazuuu.github.io/Kaishi/
 
-**Demo video:** `docs/demo.mp4`
+**Demo video:** The demo video was submitted privately through Google Drive in the Canvas submission. See docs/05-demo-video.md for the timestamps.
 
 **Course:** Applications Development and Emerging Technologies (6ADET), Holy Angel University
 
