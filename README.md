@@ -18,17 +18,11 @@
 
 **Author:** Jazuuu
 
-This repository lives in the author's own GitHub account and is public on
-purpose. There is no `student.json` here and there should not be one: see
-`docs/06-security-and-privacy.md` for what a public repo means for secrets and
-personal data.
 
 ---
 
 ## Screenshots
 
-Put two or three real screenshots at phone size in `docs/assets/`, then replace
-this paragraph with them:
 
 
 | Home | Lesson | AI Chat |
@@ -36,11 +30,8 @@ this paragraph with them:
 | ![Home](docs/assets/Home-screen.png) | ![Lesson](docs/assets/Lesson-screen.png) | ![AI Chat](docs/assets/Ai-Chat-screen.png) |
 
 
-A repo without screenshots reads as abandoned, whatever the code says.
 
 ## What it does
-
-Three to five bullets. What can a user actually do?
 
 - Learn Japanese basics through Hiragana, Katakana, and Grammar lessons.
 - Ask Sensei, the AI assistant, questions about your lessons.
@@ -77,7 +68,6 @@ repository. Copy `.env.example` to `assets/.env`, fill in your own value, and ne
 
 ## Privacy and secrets
 
-Required section. Two or three honest sentences:
 
 - Kaishi does not require an account and does not collect personal data. Your lesson progress is saved only on your device
 - The Gemini API key is stored locally in the .env file and is not committed to the repository or shown publicly.
