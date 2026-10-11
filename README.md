@@ -97,33 +97,21 @@ Required section. Two or three honest sentences:
 
 ## Status and what is next
 
-Be honest. What works, what is half done, what you would build next. An honest
-"known issues" section reads better than a claim the reader disproves in thirty
-seconds.
+- The three screens (Home, Lessons, Sensei) are in the repo, with lessons loaded from local JSON and progress saved with `shared_preferences`.
 
 ## Credits
 
 - Packages: see `pubspec.yaml`
-- Assets, icons, 3D models, sounds: name the author and the licence for each
-- People who helped, and how
+- ChatGPT and Claude were used during development. Click the AI-USAGE.md for the complete information.
 
 ## AI use
 
-If you used AI while building this, say so here. Honest disclosure is the
-standard in this course and increasingly outside it, and reporting heavy use
-accurately costs you nothing.
-
-This section is the last 10 points of the finals badge, and it wants three
-things:
+I used ChatGPT and Claude throughout the development of the app to guide me on what to do and help me understand the logic behind the code. I used them mainly to explain the code, clarify parts I did not understand, and double-check my work while I was modifying and implementing the code myself.
 
 ![Built with AI assistance](https://img.shields.io/badge/built%20with-AI%20assistance-0b5fff)
 
-- the badge above, or one you like better
-- a line naming which assistant you used and how much of the work it touched
-- a link to [AI-USAGE.md](AI-USAGE.md), where the full account lives
+- For more details about my AI usage, including examples of assistance, mistakes, and my own contributions, see [AI-USAGE.md](AI-USAGE.md)
 
-Keep the detail in `AI-USAGE.md` rather than here. This section is the summary a
-visitor reads; that file is the record the badge is graded from.
 
 ## Licence
 
